@@ -1,0 +1,63 @@
+{% from '../macros/icon.twig' import icon %}
+<div class="ham-panel {% if curPageId == 'home' %} ham-panel_landing {% endif %}">
+	<div class="ham-panel__holder">
+		<nav class="ham-panel-nav" data-plugin="dropdown"> 
+			<ul>
+				{% for item in navigation %}
+					{% if item.children|default(false) and item.children|length %}
+						<li class="has-children">
+							<span>
+								<a href="#">{{ item.title }}</a>
+								<a href="#sub-nav" class="sub-trigger" data-dropdown-btn>&nbsp;</a>
+							</span>
+							<div class="sub-nav" data-dropdown-content="sub-nav">
+								<ul>
+									{% for item in item.children %}
+										<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+									{% endfor %}
+								</ul>
+							</div>
+						</li>
+					{% else %}
+						<li {% if curPageId == item.pageId %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+					{% endif %}
+				{% endfor %}
+				<li class="ham-panel-nav__add-roll"><a href="/">создать свой ролл</a></li>
+			</ul>
+			<div class="select-box">
+				<div class="select-box__current" tabindex="2">
+					<div class="select-box__value">
+						<input type="radio" id="select4" value="1" name="select2" checked="checked" class="select-box__input">
+						<p class="select-box__input-text">краснодар</p>
+						<div class="select-box__icon"></div>
+					</div>
+					<div class="select-box__value">
+						<input type="radio" id="select5" value="2" name="select2" class="select-box__input">
+						<p class="select-box__input-text">Москва</p>
+						<div class="select-box__icon"></div>
+					</div>
+					<div class="select-box__value">
+						<input type="radio" id="select6" value="3" name="select2" class="select-box__input">
+						<p class="select-box__input-text">Ростов</p>
+						<div class="select-box__icon"></div>
+					</div>
+				</div>							
+			<ul class="select-box__list">
+				<li><label for="select4" aria-hidden class="select-box__option">краснодар</label></li>
+				<li><label for="select5" aria-hidden class="select-box__option">Москва</label></li>
+				<li><label for="select3" aria-hidden class="select-box__option">Ростов</label></li>
+			</ul>							
+			</div>
+		</nav>
+		<div class="ham-panel__info">			
+			<div class="ham-panel__phone"><a href="tel:+7 861 222 00 22">8 861 222 00 22</a></div>
+			<a href="/">
+				{{ icon('acc' , {'width': 15, 'height': 15}) }}
+			</a>
+			<a href="/">
+				{{ icon('cart' , {'width': 30, 'height': 19}) }}
+			</a>
+		</div>
+	</div>
+
+</div>

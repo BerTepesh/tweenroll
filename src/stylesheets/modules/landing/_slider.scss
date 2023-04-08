@@ -1,0 +1,100 @@
+.slick-track {
+	margin-left: 0;
+}
+.slider {
+	&__item {
+		border-radius: 20px;
+		height: 100%;
+		padding: 20px 15px 45px;
+	}
+}
+
+.slider-card {
+	display: flex !important;
+	flex-direction: column;
+	justify-content: space-between;
+	background: 
+    linear-gradient(#0F0F0F 0 0) padding-box,
+    linear-gradient(90deg, rgba(242, 242, 242, 1) 0%, rgba(112, 112, 112, 1) 100%) border-box;
+		border: 3px solid transparent;
+		transition: filter .4s ease;
+	&--rose {
+		background: 
+		linear-gradient(#0F0F0F 0 0) padding-box,
+		linear-gradient(90deg, rgba(243, 44, 115, 1), rgba(225, 13, 89, 0.53) 100%) border-box;
+	}
+	&--blue {
+		background: 
+		linear-gradient(#0F0F0F 0 0) padding-box,
+		linear-gradient(90deg, rgba(71, 134, 255, 1), rgba(12, 68, 177, 1) 100%) border-box;
+	}
+	&__name {
+		font-weight: 700;
+		font-size: 35px;
+		line-height: 98%;
+		text-transform: uppercase;
+		background: linear-gradient(91.12deg, #F32C73 3.83%, rgba(225, 13, 89, 0.53) 107.67%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		margin-bottom: 15px;
+		text-align: left;
+	}
+	&__subtitle {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 110%;
+		text-transform: uppercase;
+		background: linear-gradient(91.12deg, #F32C73 3.83%, rgba(225, 13, 89, 0.53) 107.67%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		margin-bottom: 20px;
+		text-align: left;
+	}
+	&__holder {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	&__btn {
+		text-align: center;
+	}
+	img {
+		max-width: 100%;
+		display: inline-block !important;
+	}
+}
+.slick-track {
+  display: flex !important;
+}
+.slick-list {
+	margin-left: -40px;
+}
+.slick-slide {
+  height: inherit !important;
+	padding-left: 40px;
+	& > div {
+		height: 100%;
+	}
+}
+.slider__nav .slick-arrow {
+	width: 62px;
+	height: 62px;
+	border-radius: 50%;
+	background: linear-gradient(180deg, #CCCCCC 0%, #535353 100%);
+}
+.slider__nav .slick-arrow.next {
+	right: 10px;
+	@include media-breakpoint-up(sm) {
+		right: -31px;
+	}
+}
+.slider__nav .slick-arrow.prev {
+	left: 10px;
+	@include media-breakpoint-up(sm) {
+		left: -31px;
+	}
+}
+.slider__nav .slick-arrow.slick-disabled {
+	display: none !important;
+}

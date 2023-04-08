@@ -1,0 +1,505 @@
+{% from '../../macros/icon.twig' import icon %}
+<div class="menu">
+	<div class="container">
+		<h2>меню</h2>
+		<h3>роллы</h3>
+		<div class="filter">
+			<div class="filter__name">фильтр</div>
+			<div class="filter__holder">
+				<div class="filter__sort">
+					<span onclick="sortList('price');">сортировать по цене </span>
+					<span onclick="sortList('rating');">сортировать по популярности</span>
+				</div>
+				<div class="filter__amount">
+					количество персон для сетов
+					<div class="amount">
+						<button class="amount__minus">-</button>
+						<input type="number" min="1" value="1">
+						<button class="amount__plus">+</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu__list">
+			<div class="menu__item">
+				<a href="#" class="menu-card menu-card--rose">
+					<div class="menu-card__header">
+						<div class="menu-card__img">
+							<img src="assets/images/menu/1.png" alt="">
+						</div>
+						<div class="menu-card__addition">
+							<div class="menu-card__raitng">
+								<span>4,1</span>
+								<svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<defs>
+									<linearGradient id="paint1" x1="0.4883" y1="13.3783" x2="27.2076" y2="12.4527" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#BE66F4"/>
+									<stop offset="1" stop-color="#5612AD"/>
+									</linearGradient>
+									</defs>>
+									<path d="M11.9619 1.65294C12.5606 -0.189686 15.1674 -0.189691 15.7661 1.65293L17.4476 6.82806C17.7154 7.65211 18.4833 8.21003 19.3497 8.21003H24.7912C26.7286 8.21003 27.5342 10.6893 25.9668 11.8281L21.5645 15.0265C20.8636 15.5358 20.5702 16.4385 20.838 17.2625L22.5195 22.4377C23.1182 24.2803 21.0092 25.8125 19.4418 24.6737L15.0396 21.4753C14.3386 20.966 13.3894 20.966 12.6884 21.4753L8.28621 24.6737C6.71878 25.8125 4.60981 24.2803 5.20852 22.4377L6.89002 17.2625C7.15777 16.4385 6.86445 15.5358 6.16348 15.0265L1.76125 11.8281C0.193824 10.6893 0.99937 8.21003 2.93682 8.21003H8.37828C9.24473 8.21003 10.0126 7.65211 10.2804 6.82807L11.9619 1.65294Z" fill="url(#paint1)" xlink:href="#paint1" />
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="menu-card__name">эльмира</div>
+					<div class="menu-card__footer">
+						<div class="menu-card__details">
+							<span>8 штук</span>
+							230 г
+							<b>i</b>
+						</div>
+						<div class="menu-card__price">600 ₽ </div>
+					</div>
+				</a>
+			</div>
+			<div class="menu__item">
+				<a href="#" class="menu-card menu-card--blue">
+					<div class="menu-card__header">
+						<div class="menu-card__img">
+							<img src="assets/images/menu/1.png" alt="">
+						</div>
+						<div class="menu-card__addition">
+							<div class="menu-card__raitng">
+								<span>3,8</span>
+								<svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<defs>
+									<linearGradient id="paint1" x1="0.4883" y1="13.3783" x2="27.2076" y2="12.4527" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#BE66F4"/>
+									<stop offset="1" stop-color="#5612AD"/>
+									</linearGradient>
+									</defs>>
+									<path d="M11.9619 1.65294C12.5606 -0.189686 15.1674 -0.189691 15.7661 1.65293L17.4476 6.82806C17.7154 7.65211 18.4833 8.21003 19.3497 8.21003H24.7912C26.7286 8.21003 27.5342 10.6893 25.9668 11.8281L21.5645 15.0265C20.8636 15.5358 20.5702 16.4385 20.838 17.2625L22.5195 22.4377C23.1182 24.2803 21.0092 25.8125 19.4418 24.6737L15.0396 21.4753C14.3386 20.966 13.3894 20.966 12.6884 21.4753L8.28621 24.6737C6.71878 25.8125 4.60981 24.2803 5.20852 22.4377L6.89002 17.2625C7.15777 16.4385 6.86445 15.5358 6.16348 15.0265L1.76125 11.8281C0.193824 10.6893 0.99937 8.21003 2.93682 8.21003H8.37828C9.24473 8.21003 10.0126 7.65211 10.2804 6.82807L11.9619 1.65294Z" fill="url(#paint1)" xlink:href="#paint1" />
+								</svg>
+							</div>
+							<div class="menu-card__icons">
+								<svg width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M8.33867 17.247C11.1678 17.5671 11.309 13.0147 12.7825 8.3477C13.9192 4.74741 21.1584 5.26327 21.1584 8.86356C21.1584 11.7758 17.4722 25.9676 8.33867 24.4648C3.47602 23.6648 0.21875 16.6891 0.21875 11.4886C1.83963 14.2889 5.50949 16.927 8.33867 17.247Z" fill="url(#paint8)"/>
+									<path d="M20.9775 0.943793L19.8398 5.22392C20.821 5.8598 21.2106 6.77341 21.1717 8.8866L12.7426 8.48553C13.3048 6.25339 16.0095 4.95772 17.3908 4.93489L18.1791 0.61926L20.9775 0.943793Z" fill="url(#paint9)"/>
+									<defs>
+									<linearGradient id="paint8" x1="1.70779" y1="18.8644" x2="15.8506" y2="19.3528" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#D9610B"/>
+									<stop offset="1" stop-color="#BE2727"/>
+									</linearGradient>
+									<linearGradient id="paint9" x1="13.2803" y1="6.77499" x2="22.7756" y2="9.73201" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#20C981"/>
+									<stop offset="1" stop-color="#077C44"/>
+									</linearGradient>
+									</defs>
+								</svg>
+								<svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.7339 8.68158C13.0123 5.22953 9.52412 2.04998 7.76158 0.975358C8.57531 3.52045 8.04702 6.09406 7.47608 7.69466C6.90513 9.29526 5.13892 11.9196 5.1926 11.5364C5.01698 10.6402 4.34141 8.61711 3.04413 7.69466C3.48007 10.6801 1.22268 13.5676 0.625708 16.3888C-0.654447 22.4386 4.73864 25.5227 10.3304 25.5227C15.9222 25.5227 19.7207 21.1618 19.8917 16.9047C20.1736 9.88442 16.641 5.69455 13.5437 3.71777C14.3332 5.81989 13.6113 7.81337 12.7339 8.68158Z" fill="url(#paint6)"/>
+									<path d="M9.78292 22.9155C12.1262 22.9067 14.9374 21.3185 15.1916 18.7117C15.4851 15.7009 13.3912 13.4903 12.5876 12.6113C11.784 11.7322 9.77878 10.0833 9.77878 10.0833C10.1158 11.2483 8.06917 13.6535 7.22135 14.6042C6.05873 15.9079 5.29108 16.9439 5.28472 18.7906C5.27624 21.2575 7.43962 22.9243 9.78292 22.9155Z" fill="url(#paint7)"/>
+									<defs>
+									<linearGradient id="paint6" x1="18.3364" y1="13.5298" x2="1.14809" y2="12.016" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#D03508"/>
+									<stop offset="1" stop-color="#FF7A00"/>
+									</linearGradient>
+									<linearGradient id="paint7" x1="13.1568" y1="17.4072" x2="5.95099" y2="16.8022" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#FF6B01"/>
+									<stop offset="1" stop-color="#FFBA0A"/>
+									</linearGradient>
+									</defs>
+								</svg>	
+							</div>						
+						</div>
+					</div>
+					<div class="menu-card__name">павел</div>
+					<div class="menu-card__footer">
+						<div class="menu-card__details">
+							<span>8 штук</span>
+							230 г
+							<b>i</b>
+						</div>
+						<div class="menu-card__price">700 ₽</div>
+					</div>
+				</a>
+			</div>
+			<div class="menu__item">
+				<a href="#" class="menu-card">
+					<div class="menu-card__header">
+						<div class="menu-card__img">
+							<img src="assets/images/menu/1.png" alt="">
+						</div>
+						<div class="menu-card__addition">
+							<div class="menu-card__raitng">
+								<span>7,8</span>
+								<svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<defs>
+									<linearGradient id="paint1" x1="0.4883" y1="13.3783" x2="27.2076" y2="12.4527" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#BE66F4"/>
+									<stop offset="1" stop-color="#5612AD"/>
+									</linearGradient>
+									</defs>>
+									<path d="M11.9619 1.65294C12.5606 -0.189686 15.1674 -0.189691 15.7661 1.65293L17.4476 6.82806C17.7154 7.65211 18.4833 8.21003 19.3497 8.21003H24.7912C26.7286 8.21003 27.5342 10.6893 25.9668 11.8281L21.5645 15.0265C20.8636 15.5358 20.5702 16.4385 20.838 17.2625L22.5195 22.4377C23.1182 24.2803 21.0092 25.8125 19.4418 24.6737L15.0396 21.4753C14.3386 20.966 13.3894 20.966 12.6884 21.4753L8.28621 24.6737C6.71878 25.8125 4.60981 24.2803 5.20852 22.4377L6.89002 17.2625C7.15777 16.4385 6.86445 15.5358 6.16348 15.0265L1.76125 11.8281C0.193824 10.6893 0.99937 8.21003 2.93682 8.21003H8.37828C9.24473 8.21003 10.0126 7.65211 10.2804 6.82807L11.9619 1.65294Z" fill="url(#paint1)" xlink:href="#paint1" />
+								</svg>
+							</div>
+							<div class="menu-card__icons">
+								<svg width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M8.33867 17.247C11.1678 17.5671 11.309 13.0147 12.7825 8.3477C13.9192 4.74741 21.1584 5.26327 21.1584 8.86356C21.1584 11.7758 17.4722 25.9676 8.33867 24.4648C3.47602 23.6648 0.21875 16.6891 0.21875 11.4886C1.83963 14.2889 5.50949 16.927 8.33867 17.247Z" fill="url(#paint8)"/>
+									<path d="M20.9775 0.943793L19.8398 5.22392C20.821 5.8598 21.2106 6.77341 21.1717 8.8866L12.7426 8.48553C13.3048 6.25339 16.0095 4.95772 17.3908 4.93489L18.1791 0.61926L20.9775 0.943793Z" fill="url(#paint9)"/>
+									<defs>
+									<linearGradient id="paint8" x1="1.70779" y1="18.8644" x2="15.8506" y2="19.3528" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#D9610B"/>
+									<stop offset="1" stop-color="#BE2727"/>
+									</linearGradient>
+									<linearGradient id="paint9" x1="13.2803" y1="6.77499" x2="22.7756" y2="9.73201" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#20C981"/>
+									<stop offset="1" stop-color="#077C44"/>
+									</linearGradient>
+									</defs>
+								</svg>
+								<svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.7339 8.68158C13.0123 5.22953 9.52412 2.04998 7.76158 0.975358C8.57531 3.52045 8.04702 6.09406 7.47608 7.69466C6.90513 9.29526 5.13892 11.9196 5.1926 11.5364C5.01698 10.6402 4.34141 8.61711 3.04413 7.69466C3.48007 10.6801 1.22268 13.5676 0.625708 16.3888C-0.654447 22.4386 4.73864 25.5227 10.3304 25.5227C15.9222 25.5227 19.7207 21.1618 19.8917 16.9047C20.1736 9.88442 16.641 5.69455 13.5437 3.71777C14.3332 5.81989 13.6113 7.81337 12.7339 8.68158Z" fill="url(#paint6)"/>
+									<path d="M9.78292 22.9155C12.1262 22.9067 14.9374 21.3185 15.1916 18.7117C15.4851 15.7009 13.3912 13.4903 12.5876 12.6113C11.784 11.7322 9.77878 10.0833 9.77878 10.0833C10.1158 11.2483 8.06917 13.6535 7.22135 14.6042C6.05873 15.9079 5.29108 16.9439 5.28472 18.7906C5.27624 21.2575 7.43962 22.9243 9.78292 22.9155Z" fill="url(#paint7)"/>
+									<defs>
+									<linearGradient id="paint6" x1="18.3364" y1="13.5298" x2="1.14809" y2="12.016" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#D03508"/>
+									<stop offset="1" stop-color="#FF7A00"/>
+									</linearGradient>
+									<linearGradient id="paint7" x1="13.1568" y1="17.4072" x2="5.95099" y2="16.8022" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#FF6B01"/>
+									<stop offset="1" stop-color="#FFBA0A"/>
+									</linearGradient>
+									</defs>
+								</svg>	
+							</div>						
+						</div>
+					</div>
+					<div class="menu-card__name">игорь</div>
+					<div class="menu-card__footer">
+						<div class="menu-card__details">
+							<span>8 штук</span>
+							230 г
+							<b>i</b>
+						</div>
+						<div class="menu-card__price">800 ₽</div>
+					</div>
+				</a>
+			</div>
+			<div class="menu__item">
+				<a href="#" class="menu-card menu-card--rose">
+					<div class="menu-card__header">
+						<div class="menu-card__img">
+							<img src="assets/images/menu/1.png" alt="">
+						</div>
+						<div class="menu-card__addition">
+							<div class="menu-card__raitng">
+								<span>0,8</span>
+								<svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<defs>
+									<linearGradient id="paint1" x1="0.4883" y1="13.3783" x2="27.2076" y2="12.4527" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#BE66F4"/>
+									<stop offset="1" stop-color="#5612AD"/>
+									</linearGradient>
+									</defs>>
+									<path d="M11.9619 1.65294C12.5606 -0.189686 15.1674 -0.189691 15.7661 1.65293L17.4476 6.82806C17.7154 7.65211 18.4833 8.21003 19.3497 8.21003H24.7912C26.7286 8.21003 27.5342 10.6893 25.9668 11.8281L21.5645 15.0265C20.8636 15.5358 20.5702 16.4385 20.838 17.2625L22.5195 22.4377C23.1182 24.2803 21.0092 25.8125 19.4418 24.6737L15.0396 21.4753C14.3386 20.966 13.3894 20.966 12.6884 21.4753L8.28621 24.6737C6.71878 25.8125 4.60981 24.2803 5.20852 22.4377L6.89002 17.2625C7.15777 16.4385 6.86445 15.5358 6.16348 15.0265L1.76125 11.8281C0.193824 10.6893 0.99937 8.21003 2.93682 8.21003H8.37828C9.24473 8.21003 10.0126 7.65211 10.2804 6.82807L11.9619 1.65294Z" fill="url(#paint1)" xlink:href="#paint1" />
+								</svg>
+							</div>
+							<div class="menu-card__icons">
+								<svg width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M8.33867 17.247C11.1678 17.5671 11.309 13.0147 12.7825 8.3477C13.9192 4.74741 21.1584 5.26327 21.1584 8.86356C21.1584 11.7758 17.4722 25.9676 8.33867 24.4648C3.47602 23.6648 0.21875 16.6891 0.21875 11.4886C1.83963 14.2889 5.50949 16.927 8.33867 17.247Z" fill="url(#paint8)"/>
+									<path d="M20.9775 0.943793L19.8398 5.22392C20.821 5.8598 21.2106 6.77341 21.1717 8.8866L12.7426 8.48553C13.3048 6.25339 16.0095 4.95772 17.3908 4.93489L18.1791 0.61926L20.9775 0.943793Z" fill="url(#paint9)"/>
+									<defs>
+									<linearGradient id="paint8" x1="1.70779" y1="18.8644" x2="15.8506" y2="19.3528" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#D9610B"/>
+									<stop offset="1" stop-color="#BE2727"/>
+									</linearGradient>
+									<linearGradient id="paint9" x1="13.2803" y1="6.77499" x2="22.7756" y2="9.73201" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#20C981"/>
+									<stop offset="1" stop-color="#077C44"/>
+									</linearGradient>
+									</defs>
+								</svg>
+								<svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.7339 8.68158C13.0123 5.22953 9.52412 2.04998 7.76158 0.975358C8.57531 3.52045 8.04702 6.09406 7.47608 7.69466C6.90513 9.29526 5.13892 11.9196 5.1926 11.5364C5.01698 10.6402 4.34141 8.61711 3.04413 7.69466C3.48007 10.6801 1.22268 13.5676 0.625708 16.3888C-0.654447 22.4386 4.73864 25.5227 10.3304 25.5227C15.9222 25.5227 19.7207 21.1618 19.8917 16.9047C20.1736 9.88442 16.641 5.69455 13.5437 3.71777C14.3332 5.81989 13.6113 7.81337 12.7339 8.68158Z" fill="url(#paint6)"/>
+									<path d="M9.78292 22.9155C12.1262 22.9067 14.9374 21.3185 15.1916 18.7117C15.4851 15.7009 13.3912 13.4903 12.5876 12.6113C11.784 11.7322 9.77878 10.0833 9.77878 10.0833C10.1158 11.2483 8.06917 13.6535 7.22135 14.6042C6.05873 15.9079 5.29108 16.9439 5.28472 18.7906C5.27624 21.2575 7.43962 22.9243 9.78292 22.9155Z" fill="url(#paint7)"/>
+									<defs>
+									<linearGradient id="paint6" x1="18.3364" y1="13.5298" x2="1.14809" y2="12.016" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#D03508"/>
+									<stop offset="1" stop-color="#FF7A00"/>
+									</linearGradient>
+									<linearGradient id="paint7" x1="13.1568" y1="17.4072" x2="5.95099" y2="16.8022" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#FF6B01"/>
+									<stop offset="1" stop-color="#FFBA0A"/>
+									</linearGradient>
+									</defs>
+								</svg>	
+							</div>						
+						</div>
+					</div>
+					<div class="menu-card__name">эльмира</div>
+					<div class="menu-card__footer">
+						<div class="menu-card__details">
+							<span>8 штук</span>
+							230 г
+							<b>i</b>
+						</div>
+						<div class="menu-card__price">900 ₽</div>
+					</div>
+				</a>
+			</div>
+			<div data-more class="menu__item">
+				<a href="#" class="menu-card menu-card--rose">
+					<div class="menu-card__header">
+						<div class="menu-card__img">
+							<img src="assets/images/menu/1.png" alt="">
+						</div>
+						<div class="menu-card__addition">
+							<div class="menu-card__raitng">
+								<span>4,1</span>
+								<svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<defs>
+									<linearGradient id="paint0" x1="0.4883" y1="13.3783" x2="27.2076" y2="12.4527" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#BE66F4"/>
+									<stop offset="1" stop-color="#5612AD"/>
+									</linearGradient>
+									</defs>
+									<path d="M11.9619 1.65294C12.5606 -0.189686 15.1674 -0.189691 15.7661 1.65293L17.4476 6.82806C17.7154 7.65211 18.4833 8.21003 19.3497 8.21003H24.7912C26.7286 8.21003 27.5342 10.6893 25.9668 11.8281L21.5645 15.0265C20.8636 15.5358 20.5702 16.4385 20.838 17.2625L22.5195 22.4377C23.1182 24.2803 21.0092 25.8125 19.4418 24.6737L15.0396 21.4753C14.3386 20.966 13.3894 20.966 12.6884 21.4753L8.28621 24.6737C6.71878 25.8125 4.60981 24.2803 5.20852 22.4377L6.89002 17.2625C7.15777 16.4385 6.86445 15.5358 6.16348 15.0265L1.76125 11.8281C0.193824 10.6893 0.99937 8.21003 2.93682 8.21003H8.37828C9.24473 8.21003 10.0126 7.65211 10.2804 6.82807L11.9619 1.65294Z" fill="url(#paint0)" xlink:href="#paint0" />
+									</svg>
+							</div>
+						</div>
+					</div>
+					<div class="menu-card__name">эльмира</div>
+					<div class="menu-card__footer">
+						<div class="menu-card__details">
+							<span>8 штук</span>
+							230 г
+							<b>i</b>
+						</div>
+						<div class="menu-card__price">600 ₽ </div>
+					</div>
+				</a>
+			</div>
+			<div data-more class="menu__item">
+				<a href="#" class="menu-card menu-card--blue">
+					<div class="menu-card__header">
+						<div class="menu-card__img">
+							<img src="assets/images/menu/1.png" alt="">
+						</div>
+						<div class="menu-card__addition">
+							<div class="menu-card__raitng">
+								<span>3,8</span>
+								<svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<defs>
+									<linearGradient id="paint0" x1="0.4883" y1="13.3783" x2="27.2076" y2="12.4527" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#BE66F4"/>
+									<stop offset="1" stop-color="#5612AD"/>
+									</linearGradient>
+									</defs>
+									<path d="M11.9619 1.65294C12.5606 -0.189686 15.1674 -0.189691 15.7661 1.65293L17.4476 6.82806C17.7154 7.65211 18.4833 8.21003 19.3497 8.21003H24.7912C26.7286 8.21003 27.5342 10.6893 25.9668 11.8281L21.5645 15.0265C20.8636 15.5358 20.5702 16.4385 20.838 17.2625L22.5195 22.4377C23.1182 24.2803 21.0092 25.8125 19.4418 24.6737L15.0396 21.4753C14.3386 20.966 13.3894 20.966 12.6884 21.4753L8.28621 24.6737C6.71878 25.8125 4.60981 24.2803 5.20852 22.4377L6.89002 17.2625C7.15777 16.4385 6.86445 15.5358 6.16348 15.0265L1.76125 11.8281C0.193824 10.6893 0.99937 8.21003 2.93682 8.21003H8.37828C9.24473 8.21003 10.0126 7.65211 10.2804 6.82807L11.9619 1.65294Z" fill="url(#paint0)" xlink:href="#paint0" />
+								</svg>
+							</div>
+							<div class="menu-card__icons">
+								<svg width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M8.33867 17.247C11.1678 17.5671 11.309 13.0147 12.7825 8.3477C13.9192 4.74741 21.1584 5.26327 21.1584 8.86356C21.1584 11.7758 17.4722 25.9676 8.33867 24.4648C3.47602 23.6648 0.21875 16.6891 0.21875 11.4886C1.83963 14.2889 5.50949 16.927 8.33867 17.247Z" fill="url(#paint8)"/>
+									<path d="M20.9775 0.943793L19.8398 5.22392C20.821 5.8598 21.2106 6.77341 21.1717 8.8866L12.7426 8.48553C13.3048 6.25339 16.0095 4.95772 17.3908 4.93489L18.1791 0.61926L20.9775 0.943793Z" fill="url(#paint9)"/>
+									<defs>
+									<linearGradient id="paint8" x1="1.70779" y1="18.8644" x2="15.8506" y2="19.3528" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#D9610B"/>
+									<stop offset="1" stop-color="#BE2727"/>
+									</linearGradient>
+									<linearGradient id="paint9" x1="13.2803" y1="6.77499" x2="22.7756" y2="9.73201" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#20C981"/>
+									<stop offset="1" stop-color="#077C44"/>
+									</linearGradient>
+									</defs>
+								</svg>
+								<svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.7339 8.68158C13.0123 5.22953 9.52412 2.04998 7.76158 0.975358C8.57531 3.52045 8.04702 6.09406 7.47608 7.69466C6.90513 9.29526 5.13892 11.9196 5.1926 11.5364C5.01698 10.6402 4.34141 8.61711 3.04413 7.69466C3.48007 10.6801 1.22268 13.5676 0.625708 16.3888C-0.654447 22.4386 4.73864 25.5227 10.3304 25.5227C15.9222 25.5227 19.7207 21.1618 19.8917 16.9047C20.1736 9.88442 16.641 5.69455 13.5437 3.71777C14.3332 5.81989 13.6113 7.81337 12.7339 8.68158Z" fill="url(#paint6)"/>
+									<path d="M9.78292 22.9155C12.1262 22.9067 14.9374 21.3185 15.1916 18.7117C15.4851 15.7009 13.3912 13.4903 12.5876 12.6113C11.784 11.7322 9.77878 10.0833 9.77878 10.0833C10.1158 11.2483 8.06917 13.6535 7.22135 14.6042C6.05873 15.9079 5.29108 16.9439 5.28472 18.7906C5.27624 21.2575 7.43962 22.9243 9.78292 22.9155Z" fill="url(#paint7)"/>
+									<defs>
+									<linearGradient id="paint6" x1="18.3364" y1="13.5298" x2="1.14809" y2="12.016" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#D03508"/>
+									<stop offset="1" stop-color="#FF7A00"/>
+									</linearGradient>
+									<linearGradient id="paint7" x1="13.1568" y1="17.4072" x2="5.95099" y2="16.8022" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#FF6B01"/>
+									<stop offset="1" stop-color="#FFBA0A"/>
+									</linearGradient>
+									</defs>
+								</svg>	
+							</div>												
+						</div>
+					</div>
+					<div class="menu-card__name">павел</div>
+					<div class="menu-card__footer">
+						<div class="menu-card__details">
+							<span>8 штук</span>
+							230 г
+							<b>i</b>
+						</div>
+						<div class="menu-card__price">700 ₽</div>
+					</div>
+				</a>
+			</div>
+			<div data-more class="menu__item">
+				<a href="#" class="menu-card">
+					<div class="menu-card__header">
+						<div class="menu-card__img">
+							<img src="assets/images/menu/1.png" alt="">
+						</div>
+						<div class="menu-card__addition">
+							<div class="menu-card__raitng">
+								<span>7,8</span>
+								<svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<defs>
+									<linearGradient id="paint0" x1="0.4883" y1="13.3783" x2="27.2076" y2="12.4527" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#BE66F4"/>
+									<stop offset="1" stop-color="#5612AD"/>
+									</linearGradient>
+									</defs>
+									<path d="M11.9619 1.65294C12.5606 -0.189686 15.1674 -0.189691 15.7661 1.65293L17.4476 6.82806C17.7154 7.65211 18.4833 8.21003 19.3497 8.21003H24.7912C26.7286 8.21003 27.5342 10.6893 25.9668 11.8281L21.5645 15.0265C20.8636 15.5358 20.5702 16.4385 20.838 17.2625L22.5195 22.4377C23.1182 24.2803 21.0092 25.8125 19.4418 24.6737L15.0396 21.4753C14.3386 20.966 13.3894 20.966 12.6884 21.4753L8.28621 24.6737C6.71878 25.8125 4.60981 24.2803 5.20852 22.4377L6.89002 17.2625C7.15777 16.4385 6.86445 15.5358 6.16348 15.0265L1.76125 11.8281C0.193824 10.6893 0.99937 8.21003 2.93682 8.21003H8.37828C9.24473 8.21003 10.0126 7.65211 10.2804 6.82807L11.9619 1.65294Z" fill="url(#paint0)" xlink:href="#paint0" />
+								</svg>
+							</div>
+							<div class="menu-card__icons">
+								<svg width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M8.33867 17.247C11.1678 17.5671 11.309 13.0147 12.7825 8.3477C13.9192 4.74741 21.1584 5.26327 21.1584 8.86356C21.1584 11.7758 17.4722 25.9676 8.33867 24.4648C3.47602 23.6648 0.21875 16.6891 0.21875 11.4886C1.83963 14.2889 5.50949 16.927 8.33867 17.247Z" fill="url(#paint2)"/>
+									<path d="M20.9775 0.943793L19.8398 5.22392C20.821 5.8598 21.2106 6.77341 21.1717 8.8866L12.7426 8.48553C13.3048 6.25339 16.0095 4.95772 17.3908 4.93489L18.1791 0.61926L20.9775 0.943793Z" fill="url(#paint3)"/>
+									<defs>
+									<linearGradient id="paint2" x1="1.70779" y1="18.8644" x2="15.8506" y2="19.3528" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#D9610B"/>
+									<stop offset="1" stop-color="#BE2727"/>
+									</linearGradient>
+									<linearGradient id="paint3" x1="13.2803" y1="6.77499" x2="22.7756" y2="9.73201" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#20C981"/>
+									<stop offset="1" stop-color="#077C44"/>
+									</linearGradient>
+									</defs>
+								</svg>
+								<svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.7339 8.68158C13.0123 5.22953 9.52412 2.04998 7.76158 0.975358C8.57531 3.52045 8.04702 6.09406 7.47608 7.69466C6.90513 9.29526 5.13892 11.9196 5.1926 11.5364C5.01698 10.6402 4.34141 8.61711 3.04413 7.69466C3.48007 10.6801 1.22268 13.5676 0.625708 16.3888C-0.654447 22.4386 4.73864 25.5227 10.3304 25.5227C15.9222 25.5227 19.7207 21.1618 19.8917 16.9047C20.1736 9.88442 16.641 5.69455 13.5437 3.71777C14.3332 5.81989 13.6113 7.81337 12.7339 8.68158Z" fill="url(#paint4)"/>
+									<path d="M9.78292 22.9155C12.1262 22.9067 14.9374 21.3185 15.1916 18.7117C15.4851 15.7009 13.3912 13.4903 12.5876 12.6113C11.784 11.7322 9.77878 10.0833 9.77878 10.0833C10.1158 11.2483 8.06917 13.6535 7.22135 14.6042C6.05873 15.9079 5.29108 16.9439 5.28472 18.7906C5.27624 21.2575 7.43962 22.9243 9.78292 22.9155Z" fill="url(#paint5)"/>
+									<defs>
+									<linearGradient id="paint4" x1="18.3364" y1="13.5298" x2="1.14809" y2="12.016" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#D03508"/>
+									<stop offset="1" stop-color="#FF7A00"/>
+									</linearGradient>
+									<linearGradient id="paint5" x1="13.1568" y1="17.4072" x2="5.95099" y2="16.8022" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#FF6B01"/>
+									<stop offset="1" stop-color="#FFBA0A"/>
+									</linearGradient>
+									</defs>
+								</svg>	
+							</div>												
+						</div>
+					</div>
+					<div class="menu-card__name">игорь</div>
+					<div class="menu-card__footer">
+						<div class="menu-card__details">
+							<span>8 штук</span>
+							230 г
+							<b>i</b>
+						</div>
+						<div class="menu-card__price">800 ₽</div>
+					</div>
+				</a>
+			</div>
+			<div data-more class="menu__item">
+				<a href="#" class="menu-card menu-card--rose">
+					<div class="menu-card__header">
+						<div class="menu-card__img">
+							<img src="assets/images/menu/1.png" alt="">
+						</div>
+						<div class="menu-card__addition">
+							<div class="menu-card__raitng">
+								<span>0,8</span>
+								<svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<defs>
+									<linearGradient id="paint0" x1="0.4883" y1="13.3783" x2="27.2076" y2="12.4527" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#BE66F4"/>
+									<stop offset="1" stop-color="#5612AD"/>
+									</linearGradient>
+									</defs>
+									<path d="M11.9619 1.65294C12.5606 -0.189686 15.1674 -0.189691 15.7661 1.65293L17.4476 6.82806C17.7154 7.65211 18.4833 8.21003 19.3497 8.21003H24.7912C26.7286 8.21003 27.5342 10.6893 25.9668 11.8281L21.5645 15.0265C20.8636 15.5358 20.5702 16.4385 20.838 17.2625L22.5195 22.4377C23.1182 24.2803 21.0092 25.8125 19.4418 24.6737L15.0396 21.4753C14.3386 20.966 13.3894 20.966 12.6884 21.4753L8.28621 24.6737C6.71878 25.8125 4.60981 24.2803 5.20852 22.4377L6.89002 17.2625C7.15777 16.4385 6.86445 15.5358 6.16348 15.0265L1.76125 11.8281C0.193824 10.6893 0.99937 8.21003 2.93682 8.21003H8.37828C9.24473 8.21003 10.0126 7.65211 10.2804 6.82807L11.9619 1.65294Z" fill="url(#paint0)" xlink:href="#paint0" />
+								</svg>
+							</div>
+							<div class="menu-card__icons">
+								<svg width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M8.33867 17.247C11.1678 17.5671 11.309 13.0147 12.7825 8.3477C13.9192 4.74741 21.1584 5.26327 21.1584 8.86356C21.1584 11.7758 17.4722 25.9676 8.33867 24.4648C3.47602 23.6648 0.21875 16.6891 0.21875 11.4886C1.83963 14.2889 5.50949 16.927 8.33867 17.247Z" fill="url(#paint2)"/>
+									<path d="M20.9775 0.943793L19.8398 5.22392C20.821 5.8598 21.2106 6.77341 21.1717 8.8866L12.7426 8.48553C13.3048 6.25339 16.0095 4.95772 17.3908 4.93489L18.1791 0.61926L20.9775 0.943793Z" fill="url(#paint3)"/>
+									<defs>
+									<linearGradient id="paint2" x1="1.70779" y1="18.8644" x2="15.8506" y2="19.3528" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#D9610B"/>
+									<stop offset="1" stop-color="#BE2727"/>
+									</linearGradient>
+									<linearGradient id="paint3" x1="13.2803" y1="6.77499" x2="22.7756" y2="9.73201" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#20C981"/>
+									<stop offset="1" stop-color="#077C44"/>
+									</linearGradient>
+									</defs>
+								</svg>
+								<svg width="21" height="26" viewBox="0 0 21 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.7339 8.68158C13.0123 5.22953 9.52412 2.04998 7.76158 0.975358C8.57531 3.52045 8.04702 6.09406 7.47608 7.69466C6.90513 9.29526 5.13892 11.9196 5.1926 11.5364C5.01698 10.6402 4.34141 8.61711 3.04413 7.69466C3.48007 10.6801 1.22268 13.5676 0.625708 16.3888C-0.654447 22.4386 4.73864 25.5227 10.3304 25.5227C15.9222 25.5227 19.7207 21.1618 19.8917 16.9047C20.1736 9.88442 16.641 5.69455 13.5437 3.71777C14.3332 5.81989 13.6113 7.81337 12.7339 8.68158Z" fill="url(#paint4)"/>
+									<path d="M9.78292 22.9155C12.1262 22.9067 14.9374 21.3185 15.1916 18.7117C15.4851 15.7009 13.3912 13.4903 12.5876 12.6113C11.784 11.7322 9.77878 10.0833 9.77878 10.0833C10.1158 11.2483 8.06917 13.6535 7.22135 14.6042C6.05873 15.9079 5.29108 16.9439 5.28472 18.7906C5.27624 21.2575 7.43962 22.9243 9.78292 22.9155Z" fill="url(#paint5)"/>
+									<defs>
+									<linearGradient id="paint4" x1="18.3364" y1="13.5298" x2="1.14809" y2="12.016" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#D03508"/>
+									<stop offset="1" stop-color="#FF7A00"/>
+									</linearGradient>
+									<linearGradient id="paint5" x1="13.1568" y1="17.4072" x2="5.95099" y2="16.8022" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#FF6B01"/>
+									<stop offset="1" stop-color="#FFBA0A"/>
+									</linearGradient>
+									</defs>
+								</svg>	
+							</div>												
+						</div>
+					</div>
+					<div class="menu-card__name">эльмира</div>
+					<div class="menu-card__footer">
+						<div class="menu-card__details">
+							<span>8 штук</span>
+							230 г
+							<b>i</b>
+						</div>
+						<div class="menu-card__price">900 ₽</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="menu__more">
+			<a href="javascript:void(0);" class="btn" onclick="showMore();">больше роллов</a>
+		</div>
+	</div>
+</div>
+
+<script>
+	let reverse = false;
+	const sortList = (_value) => {
+		reverse = !reverse;
+		const list = document.querySelector('.menu__list');
+		let value = '';
+		if(_value == 'rating') {
+			value = '.menu-card__raitng span'
+		} 
+		else if(_value == 'price') {
+			value = '.menu-card__price'
+		}
+		if(reverse) {
+			[...list.children]
+			.sort((a,b)=>b.querySelector(value).innerText>a.querySelector(value).innerText?1:-1)
+			.forEach(node=>list.appendChild(node));
+		} else {
+			[...list.children]
+			.sort((a,b)=>a.querySelector(value).innerText>b.querySelector(value).innerText?1:-1)
+			.forEach(node=>list.appendChild(node));
+		}
+	}
+	const showMore = () => {
+		document.querySelector('.menu__list').classList.add("active");
+		document.querySelector('.menu__more').remove();
+		return false;
+	}
+
+	document.querySelector(".amount__minus").addEventListener("click", (event) => {
+		let total = document.querySelector(".amount input")
+		if (total.value > 1) {
+			total.value = +total.value - 1;
+		}
+	})
+	document.querySelector(".amount__plus").addEventListener("click", (event) => {
+		let total = document.querySelector(".amount input")
+		total.value = +total.value + 1;
+	})
+</script>

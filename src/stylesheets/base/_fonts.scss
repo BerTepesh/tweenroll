@@ -1,0 +1,17 @@
+@font-face {
+    $path-font-face: '../fonts/PTSans-Narrow/PTSans-Narrow';
+    font-family: 'PTSans-Narrow';
+    src: local('PTSans-Narrow'), url('#{$path-font-face}.woff') format('woff'), url('#{$path-font-face}.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    $path-font-face: '../fonts/PTSans-Narrow/PTSans-NarrowBold';
+    font-family: 'PTSans-Narrow';
+    src: local('PTSans-Narrow'), url('#{$path-font-face}.woff') format('woff'), url('#{$path-font-face}.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
